@@ -26,3 +26,6 @@ jobs:
           aws-region: eu-north-1
       - name: Deploy to S3
         run: npm run deploy
+      - name: Invalidate CloudFront Distribution
+        run: |
+          aws cloudfront create-invalidation --distribution-id "${{vars.CLOUDFRONT_DISTRIBUTION_ID}}" --paths "/*"
