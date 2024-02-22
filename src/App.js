@@ -13,6 +13,7 @@ function App() {
   const { theme } = useContext(ThemeContext);
 
   console.log("%cHi", `color:${theme.primary}; font-size:50px`);
+  console.log("%cWhy do programmers prefer dark mode? \nBecause light attracts bugs.", `color:${theme.primary}; font-size:20px`);
 
   return (
     <div className="app">
